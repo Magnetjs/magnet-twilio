@@ -1,6 +1,6 @@
 {
   "name": "magnet-twilio",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Magnet adapter for twilio",
   "keywords": [
     "magnet",
