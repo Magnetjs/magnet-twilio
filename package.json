@@ -1,17 +1,16 @@
 {
   "name": "magnet-twilio",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Magnet adapter for twilio",
   "keywords": [
     "magnet",
     "magnetjs",
-    "twilio"
+    "magnet-twilio"
   ],
-  "homepage": "https://github.com/Magnetjs/magnet-twilio#readme",
+  "homepage": "https://github.com/magnetjs/magnet-twilio#readme",
   "bugs": {
-    "url": "https://github.com/Magnetjs/magnet-twilio/issues"
+    "url": "https://github.com/magnetjs/magnet-twilio/issues"
   },
-  "license": "MIT",
   "author": "Kieve Chua <kievechua@gmail.com> (https://github.com/kievechua)",
   "files": [
     "README",
@@ -21,50 +20,24 @@
   "main": "dist/index.js",
   "repository": "magnetjs/magnet-twilio",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "dist": "npm run build && npm publish",
-    "start": "babel src --out-dir dist",
-    "test": "babel-node tests/index.js | tap-spec",
-    "watch": "nodemon --ignore dist --exec \"babel src\" --out-dir dist",
-    "watch-all": "concurrently \"npm run watch\" \"npm run watch-test\"",
-    "watch-test": "nodemon --delay 0.5 --ignore src --exec babel-node tests/index.js | tap-spec"
-  },
-  "babel": {
-    "ignore": [
-      "docs",
-      "node_modules",
-      "dist",
-      "test"
-    ],
-    "plugins": [
-      "fast-async"
-    ],
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
+    "start": "fly",
+    "build": "fly build",
+    "dist": "npm run build && npm publish"
   },
   "dependencies": {
-    "magnet-core": "^3.3.0",
-    "twilio": "3.0.0-rc.13"
+    "magnet-core": "^3.7.6",
+    "twilio": "^2.11.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-preset-env": "^1.1.8",
-    "concurrently": "^3.3.0",
-    "fast-async": "^6.2.0",
-    "nodemon": "^1.9.1",
-    "standard": "^8.6.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.5.1"
+    "fly": "^2.0.5",
+    "fly-clear": "^1.0.1",
+    "fly-esnext": "^2.0.1",
+    "fly-flatten": "^1.0.1",
+    "fly-typescript": "^1.0.0",
+    "fly-watch": "^1.1.1"
   },
   "engines": {
     "node": ">=6.9.5"
-  }
+  },
+  "license": "MIT"
 }
