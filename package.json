@@ -1,6 +1,6 @@
 {
   "name": "magnet-twilio",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Magnet adapter for twilio",
   "keywords": [
     "magnet",
@@ -25,8 +25,8 @@
     "dist": "npm run build && npm publish"
   },
   "dependencies": {
-    "magnet-core": "^3.7.6",
-    "twilio": "^2.11.1"
+    "magnet-core": "^4.0.1",
+    "twilio": "^3.6.1"
   },
   "devDependencies": {
     "fly": "^2.0.5",
